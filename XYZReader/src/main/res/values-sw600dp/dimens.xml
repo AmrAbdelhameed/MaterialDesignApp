@@ -1,0 +1,18 @@
+<resources>
+    <!-- detail -->
+    <dimen name="detail_title_text_size">36sp</dimen>
+    <dimen name="detail_body_text_size">18sp</dimen>
+    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
+    <dimen name="fab_margin">24dp</dimen>
+
+    <dimen name="cardview_margin">4dp</dimen>
+    <dimen name="title">24sp</dimen>
+    <dimen name="subtitle">14sp</dimen>
+
+    <dimen name="padding_horizontal">16dp</dimen>
+    <dimen name="padding_vertical">16dp</dimen>
+    <dimen name="padding_vertical_big">24dp</dimen>
+
+    <dimen name="back_button">56dp</dimen>
+    <dimen name="swipe_refresh_layout_marginTop">65dp</dimen>
+</resources>
