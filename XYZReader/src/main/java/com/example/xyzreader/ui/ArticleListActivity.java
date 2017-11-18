@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -41,6 +42,7 @@ public class ArticleListActivity extends AppCompatActivity implements
 
     private static final String TAG = ArticleListActivity.class.toString();
     private Toolbar mToolbar;
+    private View inRefresh;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
 
@@ -67,6 +69,8 @@ public class ArticleListActivity extends AppCompatActivity implements
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        inRefresh = (View)findViewById(R.id.on_refresh_disable);
+        
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -95,6 +99,16 @@ public class ArticleListActivity extends AppCompatActivity implements
     }
 
     private void updateRefreshingUI() {
+        if (mIsRefreshing) {
+            inRefresh.setVisibility(View.VISIBLE);
+
+            Snackbar.make(inRefresh,
+                    R.string.loading, Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+
+        } else {
+            inRefresh.setVisibility(View.GONE);
+        }
         mSwipeRefreshLayout.setRefreshing(mIsRefreshing);
     }
 

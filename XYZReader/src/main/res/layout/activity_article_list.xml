@@ -42,4 +42,12 @@
             app:layout_anchor="@id/swipe_refresh_layout" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
+
+    <View
+        android:id="@+id/on_refresh_disable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4b000000"
+        android:visibility="gone" />
+
 </android.support.design.widget.CoordinatorLayout>
