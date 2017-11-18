@@ -5,9 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/cardview_margin"
     android:clickable="true"
-    app:cardElevation="@dimen/cardview_margin"
-    android:elevation="@dimen/cardview_margin"
-    app:cardMaxElevation="@dimen/cardview_margin"
+    app:cardElevation="@dimen/cardview_eval"
+    android:elevation="@dimen/cardview_eval"
+    app:cardMaxElevation="@dimen/cardview_eval"
     android:focusable="true"
     android:foreground="?selectableItemBackground">
 
